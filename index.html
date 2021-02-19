@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaraNotes</title>
+    <link rel="stylesheet" href="assets/bulma/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/1188c7635d.js" crossorigin="anonymous"></script>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: rgb(0, 0, 0, 0.07);
+            font-family: Ubuntu;
+            /* #EFEFEF */
+        }
+
+        .navigation {
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid; */
+            position: relative;
+        }
+
+        .user-icon {
+            max-width: 40px;
+            max-height: 40px;
+        }
+        .category-form{
+            display: flex;
+            position: inherit;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: 999;
+        }
+        .navigation .box{
+            border-radius: 0px 0px 35px 35px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navigation mb-5">
+                <div class="box p-0 m-0 is-radiusless">
+                <div class="level is-mobile px-5 py-3">
+                    <div class="level-left">
+                        <div class="container">
+                            <h5 class="is-size-7">
+                                Categories
+                            </h5>
+                            <h5 class="is-size-5">
+                                Andrew Márcio
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <figure class="image is-responsive">
+                            <img class="is-rounded user-icon" src="assets/img/user.png">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container main">
+            <div class="columns is-multiline is-mobile pt-4 px-5">
+                <div class="column is-6">
+                    <div class="box" data-location="pages/home.html">
+                        <div class="icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="container pt-5">
+                            <div class="title is-size-5 m-0">Food</div>
+                            <div class="descricao has-text-grey-light is-size-7">Buys on the week</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="container pt-5">
+                            <div class="title is-size-5 m-0">Home</div>
+                            <div class="descricao has-text-grey-light is-size-7">Spending for month</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <div class="container pt-5">
+                            <div class="title is-size-5 m-0">Uber</div>
+                            <div class="descricao has-text-grey-light is-size-7">Travels in the month</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6" id="add-card">
+                    <div class="box has-text-centered">
+                        <div class="icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).on('click', '.box', function() {
+                console.log($(this).attr('data-location'));
+                if ($(this).attr('data-location') !== undefined
+                    && $(this).attr('data-location') !== "") {
+                    window.location.href = $(this).attr('data-location')
+                }
+            })
+        })
+
+        function addCategory(data){
+
+        }
+    </script>
+</body>
+
+</html>

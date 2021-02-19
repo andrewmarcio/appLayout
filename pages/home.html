@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LaraNotes</title>
+        <link rel="stylesheet" href="../assets/bulma/css/bulma.min.css">
+        <script src="https://kit.fontawesome.com/1188c7635d.js" crossorigin="anonymous"></script>
+        <style>
+            html,body{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                min-height: 100vh;
+                overflow-x: hidden;
+                background-color: rgb(0, 0, 0, 0.07); /* #EFEFEF, #EDEDEA*/
+                font-family: Ubuntu;
+            }
+    
+            .navigation{
+                width: 100%;
+                height: 50px;
+                /* border: 1px solid; */
+                position: relative;
+            }
+            .user-icon {
+                max-width: 40px;
+                max-height: 40px;
+            }
+            .link {
+                text-decoration:none; 
+            }
+            .list-horizontal{
+                overflow-x: scroll;
+            }
+
+            .list-horizontal::-webkit-scrollbar {
+                display: none;
+            }
+            .divider{
+                border-bottom: 1px solid black;
+            }
+            .border-teste {
+                border: 1px solid black;
+            }
+            .card-buy{
+                display: flex;
+            }
+            .card-buy .card-left{
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                border-right: 1px solid darkgray;
+            }
+
+            .list-items{
+                overflow-y: scroll;
+            }
+
+            .list-items::-webkit-scrollbar {
+                display: none;
+            }
+            .navigation .box{
+                border-radius: 0px 0px 35px 35px !important;
+            }
+        </style>
+    </head>
+<body>
+    <section class="container">
+        <nav class="navigation mb-5">
+            <div class="box m-0 p-0">
+                <div class="level is-mobile py-3">
+                    <div class="level-item m-0 has-text-centered">
+                        <a class ="link has-text-dark" href="../index.html">
+                            <h5 class="is-size-7">
+                                <i class="fas fa-arrow-left"></i>
+                            </h5>
+                        </a>
+                    </div>
+                    <div class="level-item m-0 has-text-centered">
+                        <h5 class="is-size-5">
+                        Food
+                        </h5>
+                    </div>
+                    <div class="level-item m-0 has-text-centered">
+                        <figure class="image is-responsive">
+                            <img class="is-rounded user-icon" src="../assets/img/user.png">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container pt-4">
+            <div class="columns is-mobile list-horizontal has-text-centered px-5">
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider p-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Sunday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                01
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider px-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Monday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                02
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider p-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Tuesday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                03
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider p-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Wednesday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                04
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider p-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Thursday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                05
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box p-0 py-4">
+                        <div class="level mx-2">
+                            <div class="level-left divider p-0 m-0">
+                                <h5 class="is-size-7 has-text-weight-bold">Friday</h5>
+                            </div>
+                            <div class="level-right m-0 pt-1">
+                                06
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- scroll of days in the month-->
+
+            <div class="level is-mobile px-5">
+                <div class="level-left">
+                    <h5 class="is-size-6 has-text-weight-bold"></h5>
+                </div>
+                <div class="level-right">
+                    <div class="icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div> <!-- title line-->
+
+            <div class="container mb-0 px-5">
+                <div class="box has-background-danger">
+                    <div class="level is-mobile">
+                        <div class="level-left">
+                            <h5 class="is-size-7 has-text-light has-text-weight-bold">Total</h5>
+                        </div>
+                        <div class="level-right">
+                            <div class="container">
+                                <h5 class="is-size-5 has-text-light" id="valorTotal"></h5>
+                                <h5 class="is-size-7 has-text-centered has-text-light"></h5>
+                            </div>
+                        </div>
+    
+                    </div>                    
+                </div>
+                <div class="box has-background-link">
+                    <div class="level is-mobile">
+                        <div class="level-left">
+                            <h5 class="is-size-7 has-text-light has-text-weight-bold">Last</h5>
+                        </div>
+                        <div class="level-right">
+                            <h5 class="is-size-5 has-text-light" id="gastosTotais"></h5>
+                            <h5 class="is-size-7 has-text-centered has-text-light"></h5>
+                        </div>
+    
+                    </div>
+                </div>
+
+
+                <div class="level is-mobile">
+                    <div class="level-left">
+                        <h5 class="is-size-6 has-text-weight-bold">Spending</h5>
+                    </div>
+                    <div class="level-right">
+                        <div class="icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                    </div>
+                </div> <!-- level -->
+
+                <div class="container list-items">
+                </div> <!-- list buy items -->
+            </div> <!-- container -->
+        </div><!-- container -->
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        let state = {
+            valorTotal: 3000,
+            gastosTotais: 0
+        }
+        
+        const products = [{
+  "title": "Brown eggs",
+  "type": "dairy",
+  "description": "Raw organic brown eggs in a basket",
+  "filename": "0.jpg",
+  "height": 600,
+  "width": 400,
+  "price": 28.1,
+  "rating": 4
+}, {
+  "title": "Sweet fresh stawberry",
+  "type": "fruit",
+  "description": "Sweet fresh stawberry on the wooden table",
+  "filename": "1.jpg",
+  "height": 450,
+  "width": 299,
+  "price": 29.45,
+  "rating": 4
+}, {
+  "title": "Asparagus",
+  "type": "vegetable",
+  "description": "Asparagus with ham on the wooden table",
+  "filename": "2.jpg",
+  "height": 450,
+  "width": 299,
+  "price": 18.95,
+  "rating": 3
+}, {
+  "title": "Green smoothie",
+  "type": "dairy",
+  "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
+  "filename": "3.jpg",
+  "height": 600,
+  "width": 399,
+  "price": 17.68,
+  "rating": 4
+}, {
+  "title": "Raw legums",
+  "type": "vegetable",
+  "description": "Raw legums on the wooden table",
+  "filename": "4.jpg",
+  "height": 450,
+  "width": 299,
+  "price": 17.11,
+  "rating": 2
+}, {
+  "title": "Baking cake",
+  "type": "dairy",
+  "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+  "filename": "5.jpg",
+  "height": 450,
+  "width": 675,
+  "price": 11.14,
+  "rating": 4
+}, {
+  "title": "Pesto with basil",
+  "type": "vegetable",
+  "description": "Italian traditional pesto with basil, chesse and oil",
+  "filename": "6.jpg",
+  "height": 450,
+  "width": 299,
+  "price": 18.19,
+  "rating": 2
+}, {
+  "title": "Hazelnut in black ceramic bowl",
+  "type": "vegetable",
+  "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+  "filename": "7.jpg",
+  "height": 450,
+  "width": 301,
+  "price": 27.35,
+  "rating": 0
+}, {
+  "title": "Fresh stawberry",
+  "type": "fruit",
+  "description": "Sweet fresh stawberry on the wooden table",
+  "filename": "8.jpg",
+  "height": 600,
+  "width": 399,
+  "price": 28.59,
+  "rating": 4
+}, {
+  "title": "Lemon and salt",
+  "type": "fruit",
+  "description": "Rosemary, lemon and salt on the table",
+  "filename": "9.jpg",
+  "height": 450,
+  "width": 299,
+  "price": 15.79,
+  "rating": 5
+}, {
+  "title": "Homemade bread",
+  "type": "bakery",
+  "description": "Homemade bread",
+  "filename": "10.jpg",
+  "height": 450,
+  "width": 301,
+  "price": 17.48,
+  "rating": 3
+}, {
+  "title": "Legums",
+  "type": "vegetable",
+  "description": "Cooked legums on the wooden table",
+  "filename": "11.jpg",
+  "height": 600,
+  "width": 399,
+  "price": 14.77,
+  "rating": 0
+}];
+
+        const card = (props) => {
+            return `
+            <div class="box mb-2 p-0 py-2">
+                <div class="card-buy" style="width:100%">
+                    <div class="card-left px-2">
+                        <div class="icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                    </div>
+                    <div class="card-right px-2" style="width:100%">
+                        <div class="level is-mobile">
+                            <div class="level-left">
+                                <h5 class="is-size-7">${props.title}</h5>
+                            </div>
+                            <div class="level-right pr-2">
+                                <h5 class="is-size-7 is-pulled-right">R$ ${props.price.toFixed(2).replace('.', ',')}</h5>
+                            </div>
+                        </div> <!-- level -->
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        products.map(product => {
+            state.gastosTotais += product.price 
+            $(card(product)).appendTo($('.list-items'))
+        })
+
+        $('#valorTotal').html(`R$ ${state.valorTotal.toFixed(2).replace('.', ',')}`)
+        $('#gastosTotais').html(`R$ ${state.gastosTotais.toFixed(2).replace('.', ',')}`)
+
+
+    </script>
+</body>
+</html>
